@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31220.234
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BFD4685C-B930-4BAE-A0C5-9026CB5E6424}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{876ABC6E-46DB-40B3-8B22-1CBA3E7470FF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Iot", "Iot", "{03C7CCEC-57DF-499E-BB6D-0DF517E7A064}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tcp", "Tcp", "{9ADBB579-B4E7-4B01-B49D-D9AA967FAE79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iot.TcpServer", "src\Services\Iot\Tcp\Iot.TcpServer\Iot.TcpServer.csproj", "{3C5B557A-81B2-48C8-A225-5133FC38238B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3C5B557A-81B2-48C8-A225-5133FC38238B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C5B557A-81B2-48C8-A225-5133FC38238B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C5B557A-81B2-48C8-A225-5133FC38238B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C5B557A-81B2-48C8-A225-5133FC38238B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{876ABC6E-46DB-40B3-8B22-1CBA3E7470FF} = {BFD4685C-B930-4BAE-A0C5-9026CB5E6424}
+		{03C7CCEC-57DF-499E-BB6D-0DF517E7A064} = {876ABC6E-46DB-40B3-8B22-1CBA3E7470FF}
+		{9ADBB579-B4E7-4B01-B49D-D9AA967FAE79} = {03C7CCEC-57DF-499E-BB6D-0DF517E7A064}
+		{3C5B557A-81B2-48C8-A225-5133FC38238B} = {9ADBB579-B4E7-4B01-B49D-D9AA967FAE79}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ABDA8DB0-9453-4921-AD2F-BDA0C3483282}
+	EndGlobalSection
+EndGlobal
