@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -20,7 +21,11 @@ namespace Iot.GrpcServer
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
+                    webBuilder.ConfigureKestrel(opt=> {
+                        opt.ListenAnyIP(6300, listenOptions => listenOptions.Protocols = HttpProtocols.Http2);//grpc
+                        //opt.ListenAnyIP(8300, listenOptions => listenOptions.Protocols = HttpProtocols.Http1);//web api
+                    }).
+                    UseStartup<Startup>();
                 });
     }
 }
