@@ -1,0 +1,16 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "Iot.Grpc";
+
+import "google/protobuf/empty.proto";
+package TcpBuffer;
+
+service TcpBufferService{
+	rpc SetTcpBuffer(stream TcpBuffers) returns (google.protobuf.Empty) {}
+	rpc GetTcpBuffer(google.protobuf.Empty) returns (stream TcpBuffers) {}
+}
+message TcpBuffers{
+	string SessionId= 1;
+	string Ip= 2;
+	bytes Buffer= 3;
+}

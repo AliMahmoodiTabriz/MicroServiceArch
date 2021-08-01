@@ -9,7 +9,6 @@ namespace Iot.TcpServer.Entities
     public class TcpData
     {
         public Guid SessionId { get; set; }
-
         public string Ip { get; set; }
         public byte[] Buffer { get; set; }
         public byte[] Data { get; set; }
